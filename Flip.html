@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Flip Flop</title>
+        <style>
+            body{
+                background-color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            .flip-card{
+                background-color: transparent;
+                width: 300px;
+                height: 300px;
+                perspective: 1000px;
+            }
+
+            .flip-card-inner{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+            }
+
+            .flip-card:hover .flip-card-inner{
+                transform: rotateY(180deg);
+                
+            }
+            .flip-card-front, .flip-card-back{
+                position: absolute;
+                width: 80%;
+                height: 95%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                border-radius: 16px;
+            }
+
+            .flip-card-front{
+                background-image: linear-gradient(45deg, #13e5ec, #931bb1);
+                color: #000;
+            }
+            .flip-card-front img{
+                width: 240px;
+                height: 287px;
+                border-radius: 16px ;
+           }
+
+            .flip-card-back{
+                background-image: linear-gradient(35deg, #13e5ec, #931bb1);
+                color: #ffffff;
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-back img{
+                width: 140px;
+                margin-top: 1rem;
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-back h3{
+                margin-bottom: 0.3rem;
+                
+            }
+
+            .flip-card-back h1{
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="C:\Users\Riddhi\Desktop\mercy.jpg" />
+            </div>
+            <div class="flip-card-back">
+                <img src="C:\Users\Riddhi\Desktop\mercy.jpg" />
+                <h3>Mercedes</h3>
+                <h4>1,02,00,000CR</h4>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="C:\Users\Riddhi\Desktop\must.jpg" />
+            </div>
+            <div class="flip-card-back">
+                <img src="C:\Users\Riddhi\Desktop\must.jpg" />
+                <h3>Mustang 1969</h3>
+                <h4>1,00,00,000CR</h4>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
